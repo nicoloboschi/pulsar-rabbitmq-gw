@@ -23,4 +23,4 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           title: "Release $GITHUB_REF"
           files: |
-            pulsar-rabbitmq-gw/**/*.nar
+            starlight-rabbitmq/**/*.nar
