@@ -18,9 +18,7 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn -B package -DskipTests
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: ncipollo/release-action@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          title: "Release $GITHUB_REF"
-          files: |
-            starlight-rabbitmq/**/*.nar
+          artifacts: "starlight-rabbitmq/**/*.nar"
+          token: ${{ secrets.GITHUB_TOKEN }}
